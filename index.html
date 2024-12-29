@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makan Enak!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="brand">Makan Enak!</div>
+        <ul class="nav-links">
+            <li><a href="#menuSection">Menu</a></li>
+            <li><a href="#paymentSection">Pembayaran</a></li>
+            <li><a href="#receiptSection">Struk</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Makan Enak!</h2>
+            <p>Pesan makanan favoritmu dengan mudah dan cepat!</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menuSection" class="menu-section">
+        <div class="container">
+            <h2>Pilih Menu</h2>
+            <label for="buyerName">Nama Pembeli:</label>
+            <input type="text" id="buyerName" class="input-field" placeholder="Masukkan nama pembeli">
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="image/nasi-goreng.jpg" alt="nasi-goreng">
+                    <h3>Nasi Goreng Special</h3>
+                    <p>Rp 30,000</p>
+                    <input type="number" name="nasi-goreng" data-price="30000" class="input-field" placeholder="Qty">
+                </div>
+                <div class="menu-card">
+                    <img src="image/nasi-ayam-goreng.jpg" alt="nasi-ayam-goreng">
+                    <h3>Nasi Ayam Goreng</h3>
+                    <p>Rp 40,000</p>
+                    <input type="number" name="nasi-ayam-goreng" data-price="40000" class="input-field" placeholder="Qty">
+                </div>
+                <div class="menu-card">
+                    <img src="image/soto.jpg" alt="soto">
+                    <h3>Soto</h3>
+                    <p>Rp 20,000</p>
+                    <input type="number" name="soto" data-price="20000" class="input-field" placeholder="Qty">
+                </div>
+                <div class="menu-card">
+                    <img src="image/bakso.jpg" alt="bakso">
+                    <h3>Bakso</h3>
+                    <p>Rp 15,000</p>
+                    <input type="number" name="bakso" data-price="15000" class="input-field" placeholder="Qty">
+                </div>
+            </div>
+            <button type="button" id="placeOrder" class="btn">Pesan</button>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="paymentSection" class="payment-section">
+        <div class="container">
+            <h2>Pembayaran</h2>
+            <p class="total-label">Total Harga: <span id="totalPrice">Rp 0</span></p>
+            <label for="paymentAmount">Masukkan Pembayaran:</label>
+            <input type="number" id="paymentAmount" class="input-field" placeholder="Jumlah uang">
+            <button type="button" id="calculateChange" class="btn">Hitung Kembalian</button>
+            <p id="changeOutput" class="change-output"></p>
+        </div>
+    </section>
+
+    <!-- Receipt Section -->
+    <section id="receiptSection" class="receipt-section">
+        <div class="container">
+            <h2>Struk</h2>
+            <div id="receiptBox" class="receipt-box">
+                <p>Belum ada struk. Silakan pesan terlebih dahulu.</p>
+            </div>
+        </div>
+    </section>    
+
+    <footer>
+        <div class="container">
+            <p style="text-align: center;">Makan Enak! &copy; 2024 </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
